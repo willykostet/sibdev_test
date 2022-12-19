@@ -26,7 +26,7 @@
             </form>
             <div v-if="favAlert" class="fav-alert">
               <p>Поиск сохранён в разделе «Избранное»</p>
-              <p @click="active = 'fav'; favAlert = false">Перейти в избранное</p>
+              <p class="fav-alert-link" @click="active = 'fav'; favAlert = false">Перейти в избранное</p>
             </div>
           </div>
           <div v-if="videos" class="result">
@@ -275,14 +275,19 @@ button {
 
 .fav-alert {
   position: absolute;
-  bottom: -100%;
+  bottom: -150%;
+  padding: 10px;
   font-size: 16px;
+  box-sizing: border-box;
   line-height: 24px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   right: 0;
 }
-
+.fav-alert-link{
+  color: #1390E5;
+  cursor: pointer;
+}
 
 .search-page {
   width: 100%;
