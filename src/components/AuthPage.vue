@@ -1,4 +1,6 @@
 <template>
+  <div class="container">
+
   <div class="auth">
     <img src="../assets/logo.svg" alt="">
     <h1>Вход</h1>
@@ -7,6 +9,7 @@
     <label>Пароль</label>
     <input v-model="password" type="password">
     <button @click="loginUser()">Войти</button>
+  </div>
   </div>
 </template>
 
